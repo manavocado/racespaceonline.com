@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nieuws van Vandaag - 29 april 2025</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(
+        145deg,
+        #f6d365 0%,
+        #fda085 20%,
+        #fbc2eb 40%,
+        #a6c1ee 60%,
+        #f6d365 80%,
+        #fda085 100%
+      );
+      background-size: 200% 200%;
+      animation: gradientShift 15s ease infinite;
+      margin: 0;
+      padding: 0 20px;
+      color: #000;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      background-color: #ffffff;
+      padding: 50px;
+      border-radius: 12px;
+      color: #000;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    }
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 50px;
+      text-align: center;
+      color: #222;
+    }
+    .news-item {
+      margin-bottom: 60px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #ccc;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .news-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .news-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    .news-title {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #cc0000;
+      margin-bottom: 15px;
+    }
+    .news-content {
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+    a {
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Nieuws van Vandaag - 29 april 2025</h1>
+
+    <div class="news-item">
+      <div class="news-title">⚡ Grote stroomstoring in Zuid-Europa</div>
+      <div class="news-content">Spanje, Portugal en Zuid-Frankrijk zijn getroffen door een stroomstoring. De elektriciteit is grotendeels hersteld. <a href="https://www.nu.nl/buitenland/6354053">Lees meer</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">✈️ Staking in België verstoort verkeer</div>
+      <div class="news-content">Geen vluchten vanaf Brussels Airport vandaag en verstoringen in het treinverkeer. <a href="https://www.nu.nl/economie/6354045">Lees meer</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">💶 Tijdelijk Noodfonds Energie gesloten</div>
+      <div class="news-content">Het fonds is uitgeput na meer dan 210.000 aanvragen. <a href="https://nos.nl/l/2565409">Lees meer</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">🕊️ Paus Franciscus begraven</div>
+      <div class="news-content">Grote uitvaart in Vaticaanstad met wereldwijde belangstelling. <a href="https://nos.nl/nieuws/laatste">Lees meer</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">🕵️ FBI gebruikt leugendetectors</div>
+      <div class="news-content">Ingezet om interne klokkenluiders op te sporen na recente lekken. <a href="https://nos.nl/l/2565407">Lees meer</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">⚽ Liverpool kampioen</div>
+      <div class="news-content">Liverpool pakt de titel in Engeland onder Arne Slot. <a href="https://www.nu.nl/voetbal/6353959">Lees meer</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">🌤️ Weerbericht</div>
+      <div class="news-content">Zonnige dag met temperaturen rond de 20 graden. <a href="https://www.nu.nl/binnenland">Lees meer</a></div>
+    </div>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const items = document.querySelectorAll(".news-item");
+      let delay = 0;
+      items.forEach((item) => {
+        setTimeout(() => {
+          item.classList.add("visible");
+        }, delay);
+        delay += 250;
+      });
+    });
+  </script>
+</body>
+</html>
